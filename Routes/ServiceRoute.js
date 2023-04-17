@@ -9,7 +9,7 @@ router.route('/register').post(service_register)
 
 router.route('/update/:id').put(update_service)
 
-router.route('/get-all-service').get(get_all_service)
+router.route('/get-all-service/:location').get(get_all_service)
 
 router.route('/get-service/:id').get(get_service)
 

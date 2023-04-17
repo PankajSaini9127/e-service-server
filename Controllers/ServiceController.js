@@ -35,7 +35,7 @@ async function update_service (req,res){
 async function get_all_service (req,res){
     try {
         console.log(req.body)
-        const register = await db('service').select("*")
+        const register = await db('service').select("*").where("location","=",req.params.location)
        console.log(register)
        if(register.length > 0){
         return res.status(201).send({success:true,message:"Service Register Successfully.",services:register})
